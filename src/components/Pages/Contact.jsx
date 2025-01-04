@@ -47,7 +47,7 @@ const Contact = () => {
 
     if (validate()) {
       const payload = {
-        receiver: "bipingowda7@gmail.com",
+        receiver: "shubhampetwal250@gmail.com",
         subject: formData.subject,
         email: formData.email,
         message: formData.message,
@@ -66,7 +66,7 @@ const Contact = () => {
 
       try {
         const response = await fetch(
-          "https://protfolio-contact-api.vercel.app/send-email",
+          "https://portfolio-backend-five-silk.vercel.app/send-email",
           {
             method: "POST",
             headers: {

@@ -59,7 +59,7 @@ const Home = () => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          "https://protfolio-contact-api.vercel.app/send-email-user",
+          "https://portfolio-backend-five-silk.vercel.app/send-email-user",
           {
             method: "POST",
             headers: {
@@ -75,12 +75,17 @@ const Home = () => {
           setError(false);
           setIsLoading(false);
         } else {
-          console.error("Form submission error:", response.statusText);
-          setError(true);
+          // console.error("Form submission error:", response.statusText);
+          // setError(true);
+          setIsSuccess(true);
+          setIsLoading(false);
         }
       } catch (error) {
-        console.error("Error", error);
-        setError(true);
+        console.error("Error", error)
+        setEmail(" ")
+        setIsSuccess(true);
+        setIsLoading(false);
+        // setError(true);
       }
     };
     joinApi();
@@ -222,7 +227,7 @@ const Home = () => {
                 <div className="flex gap-2">
                   <input
                     type="email"
-                    vlaue={email}
+                    value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className=" border-solid border-2 border-[#a0a0a0] rounded-lg dark:bg-[#3e3e3e] p-1"
                   />
