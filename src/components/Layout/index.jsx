@@ -5,29 +5,43 @@ import { Link } from "react-router-dom";
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <div className="flex w-7xl flex-col bg-white dark:bg-black text-white dark:text-white min-h-screen">
-        <Header />
-        <main className="relative flex mt-20 mx-auto px-6 lg:max-w-7xl lg:px-8">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-black">
+      <Header />
+      
+      <main className="flex-grow pt-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           {children}
-          <div className=" right-0 top-[360px] hidden md:block fixed   rotate-90">
-            <Link
-              to="/contact-me"
-              class="group relative inline-block overflow-hidden rounded border  border-[#a0a0a0] dark:border-[#3e3e3e]  px-12 py-3 text-sm font-medium text-slate-800 hover:text-red-600 focus:outline-none focus:ring active:bg-red-600 active:text-white"
+        </div>
+
+        {/* Floating Contact Button with Animation */}
+        <div className="fixed bottom-8 right-8 z-50 animate-bounce-in">
+          <Link
+            to="/contact-me"
+            className="flex items-center gap-2 px-6 py-3 bg-cyan-500 dark:bg-red-500 
+                     text-white font-medium rounded-full shadow-lg hover:shadow-xl 
+                     transform hover:scale-105 transition-all duration-300
+                     animate-wiggle hover:animate-none"
+          >
+            <span className="animate-pulse">Let's Talk</span>
+            <svg 
+              className="w-5 h-5 animate-swing" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
             >
-              <span class="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-red-600 transition-all duration-200 group-hover:w-full"></span>
-              <span class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-red-600 transition-all duration-200 group-hover:h-full"></span>
-              <span class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-red-600 transition-all duration-200 group-hover:w-full"></span>
-              <span class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-red-600 transition-all duration-200 group-hover:h-full"></span>
-              <p className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent font-black">
-                CONNECT
-              </p>
-            </Link>
-          </div>
-        </main>
-        <Footer />
-      </div>
-    </>
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" 
+              />
+            </svg>
+          </Link>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
   );
 };
 

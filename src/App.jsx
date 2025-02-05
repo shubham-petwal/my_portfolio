@@ -1,9 +1,10 @@
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Header from "./components/Layout/Header";
-import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Layout/Footer";
 import Home from "./components/Pages/Home";
 import Skills from "./components/Pages/Skills";
@@ -12,11 +13,11 @@ import { Helmet } from "react-helmet";
 import Projects from "./components/Pages/Projects";
 import WorkInProgress from "./components/Pages/WorkInProgress";
 import Contact from "./components/Pages/Contact";
+import Articles from "./components/Pages/Articles";
 
 function App() {
-
   return (
-    <>
+    <BrowserRouter>
       <Helmet>
         <title>Shubham Petwal | MERN-Stack Developer and AI Engineer</title>
         <meta
@@ -27,7 +28,7 @@ function App() {
           name="keywords"
           content="Shubham, Portfolio, MERN-Stack Developer, MERN Stack, React, Node.js, Express, MongoDB, AI, LLms, Python, Django, NLP"
         />
-        <meta property="og:url" content="https://developerbipin.netlify.app" />
+        <meta property="og:url" content="https://shubham-fullstack-ai-developer.netlify.app/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -39,14 +40,14 @@ function App() {
         />
         <meta
           property="og:image"
-          content="https://developerbipin.netlify.app/profilePicForOg.jpg"
+          content="https://shubham-fullstack-ai-developer.netlify.app//profilePicForOg.jpg"
         />
         <meta property="og:image:width" content="670" />
         <meta property="og:image:height" content="534" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="https://developerbipin.netlify.app"
+          content="https://shubham-fullstack-ai-developer.netlify.app/"
         />
         <meta name="twitter:title" content="Shubham Petwal | Software Developer and AI Engineer" />
         <meta
@@ -55,7 +56,7 @@ function App() {
         />
         <meta
           name="twitter:image"
-          content="https://developerbipin.netlify.app/profilePicForOg.jpg"
+          content="https://shubham-fullstack-ai-developer.netlify.app//profilePicForOg.jpg"
         />
       </Helmet>
 
@@ -66,8 +67,10 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/working-in-progress" element={<WorkInProgress />} />
         <Route path="/contact-me" element={<Contact />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </>
+    </BrowserRouter>
   );
 }
 

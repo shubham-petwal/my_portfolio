@@ -30,6 +30,11 @@ const Header = () => {
       width: 10,
     },
     {
+      name: "Connect",
+      to: "/contact-me",
+      width: 10,
+    },
+    {
       name: "Use",
       to: "/working-in-progress",
       width: 6,
