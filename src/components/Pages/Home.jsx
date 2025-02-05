@@ -150,7 +150,7 @@ const Home = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <a
-                  href="./src/assets/shubham_3Y2025.pdf"
+                  href="https://shubham-fullstack-ai-developer.netlify.app/shubham_3Y2025.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 border-2 border-cyan-500 dark:border-red-500 
