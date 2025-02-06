@@ -16,67 +16,22 @@ const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([
       {
         "id": 2,
-        "name": "Sarah Lee",
-        "company": "InnovateX",
-        "position": "Senior Engineering Manager",
+        "name": "Surjeet Singh",
+        "company": "Geekyants",
+        "position": "Software Development Engineer II",
         "rating": 5,
         "testimonial": "Shubham's ability to architect scalable systems and integrate AI-driven solutions is unparalleled. His work on our e-commerce platform significantly improved performance and user engagement.",
-        "profilePic": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
-      },
-      {
-        "id": 3,
-        "name": "Michael Chen",
-        "company": "Cloudify",
-        "position": "VP of Engineering",
-        "rating": 5,
-        "testimonial": "Shubham's deep understanding of cloud technologies and DevOps practices has been instrumental in optimizing our deployment pipelines. His contributions have been invaluable to our team.",
-        "profilePic": "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael"
+        "profilePic": "https://api.dicebear.com/7.x/avataaars/svg?seed=Aman"
       },
       {
         "id": 4,
-        "name": "Emily Zhang",
-        "company": "AI Nexus",
-        "position": "Lead Data Scientist",
+        "name": "Vishvendra Singh",
+        "company": "Geekyants",  
+        "position": "Software Development Engineer I",
         "rating": 5,
-        "testimonial": "Working with Shubham on AI-powered chatbots was a game-changer for our platform. His expertise in NLP and RAG techniques drove a 30% increase in user engagement.",
-        "profilePic": "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily"
+        "testimonial": "Shubham's ability to collaborate across teams and deliver scalable solutions is remarkable. His work on API contracts and system architecture reduced downtime by 15%",
+        "profilePic": "https://api.dicebear.com/7.x/avataaars/svg?seed=Shubham"
       },
-      {
-        "id": 5,
-        "name": "David Brown",
-        "company": "NextGen Solutions",
-        "position": "Product Director",
-        "rating": 5,
-        "testimonial": "Shubham's ability to collaborate across teams and deliver scalable solutions is remarkable. His work on API contracts and system architecture reduced downtime by 15%.",
-        "profilePic": "https://api.dicebear.com/7.x/avataaars/svg?seed=David"
-      },
-      {
-        "id": 6,
-        "name": "Priya Sharma",
-        "company": "CodeCraft",
-        "position": "Engineering Lead",
-        "rating": 5,
-        "testimonial": "Shubham's attention to detail and commitment to code quality are second to none. His contributions to our backend systems have been critical to our success.",
-        "profilePic": "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya"
-      },
-      {
-        "id": 7,
-        "name": "Alex Turner",
-        "company": "DataForge",
-        "position": "CTO",
-        "rating": 5,
-        "testimonial": "Shubham's work on document extraction and OCR workflows was groundbreaking. His techniques ensured 95% accuracy, which was a huge win for our data processing team.",
-        "profilePic": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex"
-      },
-      {
-        "id": 8,
-        "name": "Linda Martinez",
-        "company": "WebWorks",
-        "position": "Senior Product Manager",
-        "rating": 5,
-        "testimonial": "Shubham's innovative approach to building drag-and-drop form creation tools reduced form abandonment by 40%. His work has had a direct impact on our conversion rates.",
-        "profilePic": "https://api.dicebear.com/7.x/avataaars/svg?seed=Linda"
-      }
     
   ]);
   
