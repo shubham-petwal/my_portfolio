@@ -14,6 +14,7 @@ import Projects from "./components/Pages/Projects";
 import WorkInProgress from "./components/Pages/WorkInProgress";
 import Contact from "./components/Pages/Contact";
 import Articles from "./components/Pages/Articles";
+import Testimonials from "./components/Pages/Testimonials";
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
         <Route path="/working-in-progress" element={<WorkInProgress />} />
         <Route path="/contact-me" element={<Contact />} />
         <Route path="/articles" element={<Articles />} />
+        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
