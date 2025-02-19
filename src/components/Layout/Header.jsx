@@ -39,6 +39,10 @@ const Header = () => {
       name: "Testimonials",
       to: "/testimonials",
     },
+    {
+      name: "Videos",
+      to: "/videos",
+    },
   ];
 
   useEffect(() => {

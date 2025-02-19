@@ -15,6 +15,7 @@ import WorkInProgress from "./components/Pages/WorkInProgress";
 import Contact from "./components/Pages/Contact";
 import Articles from "./components/Pages/Articles";
 import Testimonials from "./components/Pages/Testimonials";
+import Videos from "./components/Pages/Videos";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
         <Route path="/contact-me" element={<Contact />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/videos" element={<Videos />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
