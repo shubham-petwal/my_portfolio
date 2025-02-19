@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../Layout";
 import { motion } from "framer-motion"; // Install framer-motion for animations
 import { Link } from "react-router-dom";
-import shubham from "../../assets/shubham_profile.jpeg";
+import shubham from "../../assets/profilePic2.png";
 import geekyants from "../../assets/geekyants.png";
 // import { Helmet } from "react-helmet-async";
 import { Helmet } from "react-helmet";
@@ -91,7 +91,7 @@ const Home = () => {
                 custom={1}
               >
                 I'm Shubham, a full-stack developer based in Bengaluru. I specialize in building scalable web applications 
-                and end-to-end AI-driven solutions using the MERN stack, machine learning, and natural language processing technologies.
+                and end-to-end AI-driven solutions using the MERN stack, GenAI, machine learning, and natural language processing technologies.
               </motion.p>
 
               {/* Social Media Icons */}
@@ -188,13 +188,72 @@ const Home = () => {
               </div>
             </motion.div>
 
+            {/* Project Demos Preview Section */}
+            <motion.div 
+              className="space-y-6"
+              variants={textReveal}
+              initial="initial"
+              animate="animate"
+              custom={3}
+            >
+              <div className="bg-gradient-to-r from-cyan-50 to-cyan-100 dark:from-zinc-800/50 dark:to-zinc-900/50 
+                            rounded-2xl p-6 border border-zinc-200 dark:border-zinc-700">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="flex-1 space-y-3">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full 
+                                bg-white/80 dark:bg-zinc-800/80 shadow-sm">
+                      <span className="w-2 h-2 rounded-full bg-cyan-500 dark:bg-red-500 animate-pulse"></span>
+                      <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                        Featured Projects
+                      </span>
+                    </div>
+                    
+                    <h2 className="text-2xl font-bold font-montserrat text-gray-900 dark:text-white">
+                      Watch My Projects in Action
+                    </h2>
+                    
+                    <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+                      From RAG implementations to AR experiences, see how I bring ideas to life.
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {['AI/ML', 'AR/VR', 'Full-Stack', 'Computer Vision'].map((tag) => (
+                        <span key={tag} className="px-2 py-1 text-xs bg-white/60 dark:bg-zinc-800/60 
+                                               rounded-full text-gray-700 dark:text-gray-300">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-3">
+                    <Link
+                      to="/videos"
+                      className="inline-flex items-center justify-center gap-2 px-4 py-2 
+                             bg-cyan-500 dark:bg-red-500 text-white font-semibold rounded-lg
+                             hover:bg-cyan-600 dark:hover:bg-red-600 transform hover:scale-105
+                             transition-all duration-300 shadow-lg"
+                    >
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                              d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Watch Demos
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
             {/* CTA Buttons with hover animation */}
             <motion.div 
               className="flex flex-wrap gap-4 pt-4"
               variants={textReveal}
               initial="initial"
               animate="animate"
-              custom={3}
+              custom={4}
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}

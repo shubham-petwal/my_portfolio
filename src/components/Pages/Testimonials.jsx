@@ -96,9 +96,9 @@ const Testimonials = () => {
 
   return (
     <Layout>
-      <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="max-w-6xl mx-auto px-4 py-12 dark:text-white">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold font-montserrat mb-4">
+          <h1 className="text-4xl font-bold font-montserrat mb-4 text-black dark:text-white">
             Client Testimonials
           </h1>
           <p className="text-gray-600 dark:text-gray-400">
@@ -108,11 +108,11 @@ const Testimonials = () => {
 
         {/* Add Testimonial Form */}
         <div className="bg-white dark:bg-zinc-800/50 rounded-2xl p-8 mb-16">
-          <h2 className="text-2xl font-semibold mb-6">Share Your Experience</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-black dark:text-white">Share Your Experience</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium mb-2">
+                <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
                   Name <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -120,35 +120,38 @@ const Testimonials = () => {
                   value={formData.name}
                   onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                   className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700
-                           bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-cyan-500 dark:focus:ring-red-500"
+                           bg-white dark:bg-zinc-900 text-gray-900 dark:text-white
+                           focus:ring-2 focus:ring-cyan-500 dark:focus:ring-red-500"
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Company</label>
+                <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Company</label>
                 <input
                   type="text"
                   value={formData.company}
                   onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
                   className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700
-                           bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-cyan-500 dark:focus:ring-red-500"
+                           bg-white dark:bg-zinc-900 text-gray-900 dark:text-white
+                           focus:ring-2 focus:ring-cyan-500 dark:focus:ring-red-500"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">Position</label>
+              <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Position</label>
               <input
                 type="text"
                 value={formData.position}
                 onChange={(e) => setFormData(prev => ({ ...prev, position: e.target.value }))}
                 className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700
-                         bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-cyan-500 dark:focus:ring-red-500"
+                         bg-white dark:bg-zinc-900 text-gray-900 dark:text-white
+                         focus:ring-2 focus:ring-cyan-500 dark:focus:ring-red-500"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">
+              <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
                 Rating <span className="text-red-500">*</span>
               </label>
               <div className="flex gap-2">
@@ -172,7 +175,7 @@ const Testimonials = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">
+              <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
                 Your Testimonial <span className="text-red-500">*</span>
               </label>
               <textarea
@@ -180,7 +183,8 @@ const Testimonials = () => {
                 onChange={(e) => setFormData(prev => ({ ...prev, testimonial: e.target.value }))}
                 rows={4}
                 className="w-full px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700
-                         bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-cyan-500 dark:focus:ring-red-500"
+                         bg-white dark:bg-zinc-900 text-gray-900 dark:text-white
+                         focus:ring-2 focus:ring-cyan-500 dark:focus:ring-red-500"
                 required
               />
             </div>
@@ -235,10 +239,10 @@ const Testimonials = () => {
                 <img
                   src={testimonial.profilePic}
                   alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover"
+                  className="w-16 h-16 rounded-full object-cover bg-gray-100 dark:bg-zinc-700"
                 />
                 <div>
-                  <h3 className="font-semibold text-lg">{testimonial.name}</h3>
+                  <h3 className="font-semibold text-lg text-black dark:text-white">{testimonial.name}</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     {testimonial.position} {testimonial.company && `at ${testimonial.company}`}
                   </p>

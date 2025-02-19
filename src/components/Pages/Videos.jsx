@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Layout from "../Layout";
 import ReactPlayer from "react-player";
 import { motion } from "framer-motion";
@@ -10,7 +10,7 @@ const Videos = () => {
     {
       id: 1,
       title: "Custom RAG Implementation with LangChain",
-      description: "An in-depth demonstration of a production-ready Retrieval Augmented Generation (RAG) system built with LangChain and GenAI. This scalable solution can be integrated into any enterprise application for enhanced document processing and knowledge retrieval.",
+      description: "Production-ready RAG system built with LangChain and GenAI for intelligent document processing and knowledge retrieval in enterprise applications.",
       url: "https://youtu.be/ueGuBZ1SKK8",
       thumbnail: "https://img.youtube.com/vi/ueGuBZ1SKK8/0.jpg",
       tags: ["GenAI", "LangChain", "Python", "React", "FastAPI"]
@@ -18,7 +18,7 @@ const Videos = () => {
     {
       id: 2,
       title: "InvestHub - AI-Powered Startup-Investor Matching Platform",
-      description: "A sophisticated platform leveraging AI to create meaningful connections between startups and investors. Features intelligent matching algorithms and detailed analytics for optimal pairing.",
+      description: "Smart platform using AI algorithms to match startups with potential investors based on comprehensive analytics and compatibility metrics.",
       url: "https://youtu.be/mR3Iex9tIXQ",
       thumbnail: "https://img.youtube.com/vi/mR3Iex9tIXQ/0.jpg",
       tags: ["GenAI", "Python", "React", "FastAPI", "OpenAI"]
@@ -26,7 +26,7 @@ const Videos = () => {
     {
       id: 3,
       title: "Firebase GenKit SDK Integration Guide",
-      description: "Comprehensive tutorial on implementing Firebase GenKit SDK for building advanced chatbots and intelligent agents. Learn best practices for deployment and optimization.",
+      description: "Quick guide to implementing Firebase GenKit SDK for building intelligent chatbots and agents with optimal performance.",
       url: "https://youtu.be/a4aQ4X76s0M",
       thumbnail: "https://img.youtube.com/vi/a4aQ4X76s0M/0.jpg",
       tags: ["Firebase", "GenKit", "React", "OpenAI"]
@@ -36,7 +36,7 @@ const Videos = () => {
     {
       id: 4,
       title: "Advanced Augmented Reality Implementation",
-      description: "Showcase of cutting-edge AR technology, demonstrating real-time dragon rendering in physical space using Python and Unity Engine. Perfect for immersive gaming and educational applications.",
+      description: "Real-time dragon rendering in physical space using Python and Unity Engine, designed for immersive gaming experiences.",
       url: "https://youtube.com/shorts/qUPiDUYu8EI?feature=share",
       thumbnail: "https://img.youtube.com/vi/qUPiDUYu8EI/0.jpg",
       tags: ["Unity Engine", "MAC", "IOS", "Python", "AR"]
@@ -44,7 +44,7 @@ const Videos = () => {
     {
       id: 5,
       title: "Interactive Virtual Painter with Hand Tracking",
-      description: "An innovative application combining OpenCV and MediaPipe for precise hand tracking, enabling intuitive virtual painting. Features real-time gesture recognition and smooth drawing capabilities.",
+      description: "OpenCV and MediaPipe-powered application enabling intuitive virtual painting through precise hand gesture recognition.",
       url: "https://youtu.be/_VD0wQqk8a0",
       thumbnail: "https://img.youtube.com/vi/_VD0wQqk8a0/0.jpg",
       tags: ["MAC", "Python", "OpenCV", "MediaPipe", "Hand Tracking"]
@@ -52,7 +52,7 @@ const Videos = () => {
     {
       id: 6,
       title: "Real-World Object AR Video Mapping",
-      description: "Advanced augmented reality demonstration showing seamless integration of animated content (sea bird animation) with real-world objects using Python and Unity Engine.",
+      description: "Seamless integration of animated content with real-world objects using Python and Unity Engine for enhanced AR experiences.",
       url: "https://youtu.be/JxROjhIWziw",
       thumbnail: "https://img.youtube.com/vi/JxROjhIWziw/0.jpg",
       tags: ["Unity Engine", "MAC", "IOS", "Python", "AR"]
@@ -62,7 +62,7 @@ const Videos = () => {
     {
       id: 7,
       title: "Ollama GPU Acceleration Guide for M1 Mac",
-      description: "Step-by-step tutorial on optimizing Ollama performance with GPU acceleration on M1 Macs. Learn to run large language models locally with maximum efficiency.",
+      description: "Optimize Ollama performance with GPU acceleration on M1 Macs for efficient local LLM deployment.",
       url: "https://youtu.be/0OYPCNAoXso",
       thumbnail: "https://img.youtube.com/vi/0OYPCNAoXso/0.jpg",
       tags: ["Ollama", "MAC M1", "Python", "LLM"]
@@ -70,7 +70,7 @@ const Videos = () => {
     {
       id: 8,
       title: "Advanced Lead Generation System",
-      description: "Comprehensive guide on building an automated lead generation system utilizing LinkedIn and Google Resources. Includes implementation of AI-powered data extraction and analysis.",
+      description: "Automated lead generation system using LinkedIn and Google Resources with AI-powered data extraction.",
       url: "https://youtu.be/WxQ2eQslCjE",
       thumbnail: "https://img.youtube.com/vi/WxQ2eQslCjE/0.jpg",
       tags: ["Next.js", "Python", "FastAPI", "OpenAI"]
@@ -78,7 +78,7 @@ const Videos = () => {
     {
       id: 9,
       title: "Computer Vision-Based Drag and Drop Interface",
-      description: "Implementation of an intuitive virtual drag and drop system using Python and OpenCV. Features real-time object detection and smooth interaction handling.",
+      description: "Intuitive virtual drag and drop system featuring real-time object detection and smooth interaction handling.",
       url: "https://youtu.be/Y06XP8p4-lg",
       thumbnail: "https://img.youtube.com/vi/Y06XP8p4-lg/0.jpg",
       tags: ["OpenCV", "Python", "Computer Vision", "UI/UX"]
@@ -86,12 +86,25 @@ const Videos = () => {
   ];
 
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const featuredVideoRef = useRef(null);
+
+  // Function to handle video selection and scrolling
+  const handleVideoSelect = (video) => {
+    setSelectedVideo(video);
+    // Scroll to featured video with smooth animation
+    setTimeout(() => {
+      featuredVideoRef.current?.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 100);
+  };
 
   return (
     <Layout>
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-12 dark:text-white">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold font-montserrat mb-4">
+          <h1 className="text-4xl font-bold font-montserrat mb-4 text-black dark:text-white">
             Project Demos
           </h1>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -102,7 +115,7 @@ const Videos = () => {
 
         {/* Featured Video Player */}
         {selectedVideo && (
-          <div className="mb-16">
+          <div className="mb-16" ref={featuredVideoRef}>
             <div className="relative pt-[56.25%] bg-zinc-900 rounded-2xl overflow-hidden">
               <ReactPlayer
                 url={selectedVideo.url}
@@ -112,20 +125,20 @@ const Videos = () => {
                 controls
                 playing
                 config={{
-                  file: {
-                    attributes: {
-                      controlsList: 'nodownload'
-                    }
+                  youtube: {
+                    playerVars: { theme: 'dark' }
                   }
                 }}
               />
             </div>
             <div className="mt-4">
-              <h2 className="text-2xl font-semibold">{selectedVideo.title}</h2>
+              <h2 className="text-2xl font-semibold text-black dark:text-white">
+                {selectedVideo.title}
+              </h2>
               <p className="text-gray-600 dark:text-gray-400 mt-2">
                 {selectedVideo.description}
               </p>
-              <div className="flex gap-2 mt-3">
+              <div className="flex flex-wrap gap-2 mt-3">
                 {selectedVideo.tags.map((tag) => (
                   <span
                     key={tag}
@@ -181,15 +194,17 @@ const Videos = () => {
                       </svg>
                     </div>
                   }
-                  onClickPreview={() => setSelectedVideo(video)}
+                  onClickPreview={() => handleVideoSelect(video)}
                 />
               </div>
               <div className="p-4">
-                <h3 className="font-semibold text-lg mb-2">{video.title}</h3>
+                <h3 className="font-semibold text-lg mb-2 text-black dark:text-white">
+                  {video.title}
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
                   {video.description}
                 </p>
-                <div className="flex gap-2 mt-3">
+                <div className="flex flex-wrap gap-2 mt-3">
                   {video.tags.map((tag) => (
                     <span
                       key={tag}
