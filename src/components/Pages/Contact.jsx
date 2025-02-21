@@ -157,7 +157,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-col gap-4 min-w-[200px]">
                   <a
-                    href="https://shubham-fullstack-ai-developer.netlify.app/shubham_3Y2025.pdf"
+                    href="https://shubhampetwal.netlify.app/shubham_3Y2025.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl 
@@ -173,7 +173,7 @@ const Contact = () => {
                     View Resume
                   </a>
                   <a
-                    href="https://shubham-fullstack-ai-developer.netlify.app/shubham_3Y2025.pdf"
+                    href="https://shubhampetwal.netlify.app/shubham_3Y2025.pdf"
                     download
                     className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
                              bg-cyan-500 dark:bg-red-500 text-white font-semibold 
