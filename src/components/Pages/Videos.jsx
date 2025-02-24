@@ -17,11 +17,43 @@ const Videos = () => {
     },
     {
       id: 2,
-      title: "InvestHub - AI-Powered Startup-Investor Matching Platform",
+      title: "InvestHub - Investor Matching Platform",
       description: "Smart platform using AI algorithms to match startups with potential investors based on comprehensive analytics and compatibility metrics.",
       url: "https://youtu.be/mR3Iex9tIXQ",
       thumbnail: "https://img.youtube.com/vi/mR3Iex9tIXQ/0.jpg",
       tags: ["GenAI", "Python", "React", "FastAPI", "OpenAI"]
+    },
+    {
+      id: 8,
+      title: "Advanced Lead Generation System",
+      description: "Automated lead generation system using LinkedIn and Google Resources with AI-powered data extraction.",
+      url: "https://youtu.be/WxQ2eQslCjE",
+      thumbnail: "https://img.youtube.com/vi/WxQ2eQslCjE/0.jpg",
+      tags: ["Next.js", "Python", "FastAPI", "OpenAI"]
+    },
+    {
+      id: 10,
+      title: "Google Meet Bot",
+      description: "Created Google Meet Bot to automatically join meetings and record the conversation and return the transcript.",
+      url: "https://youtu.be/4ZalXUIkTFU",
+      thumbnail: "https://img.youtube.com/vi/4ZalXUIkTFU/0.jpg",
+      tags: ["Django", "Python", "Selenium(Headless Browser)", "Google transcription API"]
+    },
+    {
+      id: 12,
+      title: "Document Assistant chatbot",
+      description: "Created RAG on personal documents using LangChain and GenAI to answer questions about the documents.",
+      url: "https://youtu.be/-7-Y3W0fTW4",
+      thumbnail: "https://img.youtube.com/vi/-7-Y3W0fTW4/0.jpg",
+      tags: ["LangChain", "GenAI", "Python", "React", "FastAPI", "RAG"]
+    },
+    {
+      id: 11,
+      title: "Instagram Clone",
+      description: "Created Full Stack Instagram Clone with all features included in it like login, signup, post, like, comment, follow, unfollow, etc. using React, Next.js, and Firebase.",
+      url: "https://youtu.be/tazFTSDPb8k",
+      thumbnail: "https://img.youtube.com/vi/tazFTSDPb8k/1.jpg",
+      tags: ["Next.js", "React", "Express", "Node.js", "Firebase", "TypeScript", "Tailwind CSS"]
     },
     {
       id: 3,
@@ -31,8 +63,23 @@ const Videos = () => {
       thumbnail: "https://img.youtube.com/vi/a4aQ4X76s0M/0.jpg",
       tags: ["Firebase", "GenKit", "React", "OpenAI"]
     },
-
+    {
+      id: 13,
+      title: "Travel Planner",
+      description: "Created GenAI based travel planner to plan a trip to any destination with the help of AI.",
+      url: "https://youtu.be/uKbt3RHS5c0",
+      thumbnail: "https://img.youtube.com/vi/uKbt3RHS5c0/0.jpg",
+      tags: ["React.js", "Node.js", "Express", "MongoDB", "Tailwind CSS", "OpenAI"]
+    },
     // Computer Vision and AR Projects
+    {
+      id: 14,
+      title: "Solar system in Reality",
+      description: "User can see the solar system and all Planets in reality using Python and Unity Engine.",
+      url: "https://youtube.com/shorts/_qTxMmF9464",
+      thumbnail: "https://img.youtube.com/vi/_qTxMmF9464/0.jpg",
+      tags: ["Python", "Unity Engine", "AR", "pycharm", "mac"]
+    },
     {
       id: 4,
       title: "Advanced Augmented Reality Implementation",
@@ -68,14 +115,6 @@ const Videos = () => {
       tags: ["Ollama", "MAC M1", "Python", "LLM"]
     },
     {
-      id: 8,
-      title: "Advanced Lead Generation System",
-      description: "Automated lead generation system using LinkedIn and Google Resources with AI-powered data extraction.",
-      url: "https://youtu.be/WxQ2eQslCjE",
-      thumbnail: "https://img.youtube.com/vi/WxQ2eQslCjE/0.jpg",
-      tags: ["Next.js", "Python", "FastAPI", "OpenAI"]
-    },
-    {
       id: 9,
       title: "Computer Vision-Based Drag and Drop Interface",
       description: "Intuitive virtual drag and drop system featuring real-time object detection and smooth interaction handling.",
@@ -93,7 +132,7 @@ const Videos = () => {
     setSelectedVideo(video);
     // Scroll to featured video with smooth animation
     setTimeout(() => {
-      featuredVideoRef.current?.scrollIntoView({ 
+      featuredVideoRef.current?.scrollIntoView({
         behavior: 'smooth',
         block: 'center'
       });
@@ -108,7 +147,7 @@ const Videos = () => {
             Project Demos
           </h1>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Watch demonstrations of my projects and see them in action. Each video showcases 
+            Watch demonstrations of my projects and see them in action. Each video showcases
             the features and functionality of different applications I've built.
           </p>
         </div>
@@ -173,23 +212,23 @@ const Videos = () => {
                   playIcon={
                     <div className="bg-cyan-500 dark:bg-red-500 rounded-full p-4 
                                   transform transition-transform hover:scale-110">
-                      <svg 
-                        className="w-8 h-8 text-white" 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round" 
-                          strokeWidth={2} 
-                          d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" 
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
                         />
-                        <path 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round" 
-                          strokeWidth={2} 
-                          d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                         />
                       </svg>
                     </div>
